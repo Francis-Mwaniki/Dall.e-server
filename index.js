@@ -22,7 +22,7 @@ const config= new Configuration({
 const openai = new OpenAIApi(config);
 
 app.post('/', async (req, res) => {
-    const prompt = 'logo';
+    const prompt = req.body.prompt
     console.log(prompt);
     console.log(req.body);
     try {
